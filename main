@@ -1,0 +1,25 @@
+Star [] stars; 
+int n = 50;                                               
+
+stars = new Star[n];
+
+void setup() {
+  size(1000, 800);
+
+
+  int i = 0;
+  while ( i < n ) {
+    stars [i] = new Star();
+    i++;
+  }
+}
+
+void draw() {           
+  background(0);
+  int i = 0; //////////////// have to set i = 0;
+  while ( i < n ) {
+    stars[i]. act();       // getting each o the balls to do their behavorial action
+    stars[i] . show();
+    i++; 
+  }
+}
